@@ -19,3 +19,8 @@
         (append (reverse-general (cdr L)) (list (car L)))
     )
 )
+
+(display (reverse-general '(a b c))) ;check
+(newline)
+(display (reverse-general '(a b ()))) ;check
+(newline)
