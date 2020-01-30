@@ -8,3 +8,7 @@
 )
 (display L)
 (newline)
+
+;function reverse-general using recursion
+    ;parameter - a list
+;the result is a reversed version of the input list
