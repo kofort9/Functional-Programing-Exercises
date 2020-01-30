@@ -12,3 +12,10 @@
 ;function reverse-general using recursion
     ;parameter - a list
 ;the result is a reversed version of the input list
+
+(define (reverse-general L)
+    (if (null? L)
+        '()
+        (append (reverse-general (cdr L)) (list (car L)))
+    )
+)
