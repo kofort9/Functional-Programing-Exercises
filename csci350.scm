@@ -30,37 +30,46 @@
 (newline)
 (display (reverse-general '((1 (2 3) (4 (a (b (c d)))))))) ;check
 
-; 2) sum-up-numbers-simple
-;function sum-up-numbers-simple using recursion
+
+
+
+
+
+
+
+
+
+; 3) sum-up-numbers-general
+;function sum-up-numbers-general using recursion
     ;parameter - a list
 ;the result is the sum of all the numbers in the input list
 
-(define (sum-up-numbers-simple L)
+(define (sum-up-numbers-general L)
   (cond
     ((null? L) 0)
-    ((list? (car L)) (+ (sum-up-numbers-simple (car L)) (sum-up-numbers-simple (cdr L))))
-    ((not(number? (car L))) (sum-up-numbers-simple (cdr L)))
-    (else (+ (car L) (sum-up-numbers-simple (cdr L))))
+    ((list? (car L)) (+ (sum-up-numbers-general (car L)) (sum-up-numbers-general (cdr L))))
+    ((not(number? (car L))) (sum-up-numbers-general (cdr L)))
+    (else (+ (car L) (sum-up-numbers-general (cdr L))))
   )
 )
 
 ;Test cases
-(display (sum-up-numbers-simple '())) ;check
+(display (sum-up-numbers-general '())) ;check
 (newline)
-(display (sum-up-numbers-simple '(100))) ;check
+(display (sum-up-numbers-general '(100))) ;check
 (newline)
-(display (sum-up-numbers-simple '(100 200))) ;check
+(display (sum-up-numbers-general '(100 200))) ;check
 (newline)
-(display (sum-up-numbers-simple '(a))) ;check
+(display (sum-up-numbers-general '(a))) ;check
 (newline)
-(display (sum-up-numbers-simple '(a 100 b 200 c 300 d))) ;check
+(display (sum-up-numbers-general '(a 100 b 200 c 300 d))) ;check
 (newline)
-(display (sum-up-numbers-simple '(()))) ;check
+(display (sum-up-numbers-general '(()))) ;check
 (newline)
-(display (sum-up-numbers-simple '((100)))) ;check
+(display (sum-up-numbers-general '((100)))) ;check
 (newline)
-(display (sum-up-numbers-simple  '(100 (200))))  ;check
+(display (sum-up-numbers-general  '(100 (200))))  ;check
 (newline)
-(display (sum-up-numbers-simple '(a 100 b (200) c 300 d))) ;check
+(display (sum-up-numbers-general '(a 100 b (200) c 300 d))) ;check
 (newline)
-(display (sum-up-numbers-simple '(a 100 ((b ((200) c)) 300 d)))) ;check
+(display (sum-up-numbers-general '(a 100 ((b ((200) c)) 300 d)))) ;check
