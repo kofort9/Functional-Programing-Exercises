@@ -101,3 +101,11 @@
 (display (sum-up-numbers-general '(a 100 b (200) c 300 d))) ;check
 (newline)
 (display (sum-up-numbers-general '(a 100 ((b ((200) c)) 300 d)))) ;check
+
+
+; 4) min-above-min
+    ; parameters are 2 list L1,L2
+    ; find the minimum number in L1 that is less then the minumum in L2
+    ; if there is no number in L2, return the minumum in L1
+    ; if there is no number in L1 that is larger than the smallest  number in L2
+        ; return #F
