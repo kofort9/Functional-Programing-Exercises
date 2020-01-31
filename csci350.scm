@@ -56,3 +56,8 @@
 (newline)
 (display (sum-up-numbers-simple '(())))
 (newline)
+(display (sum-up-numbers-simple '(a))) ;check
+(newline)
+(display (sum-up-numbers-simple '(a 100 b 200 c 300 d))) ;check
+(newline)
+(display (sum-up-numbers-simple '(())))
