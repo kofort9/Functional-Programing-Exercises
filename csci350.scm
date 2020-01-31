@@ -29,3 +29,10 @@
 (display (reverse-general '((a (b c) ((d e) f) g)))) ;check
 (newline)
 (display (reverse-general '((1 (2 3) (4 (a (b (c d)))))))) ;check
+
+; 2) sum-up-numbers-simple
+;function sum-up-numbers-simple using recursion
+    ;parameter - a list
+;the result is the sum of all the numbers in the input list
+
+(define (sum-up-numbers-simple L)
