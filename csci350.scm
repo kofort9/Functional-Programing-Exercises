@@ -49,7 +49,11 @@
 (display (sum-up-numbers-simple '())) ;check
 (newline)
 (display (sum-up-numbers-simple '(100 200))) ;
-
+(newline)
+(display (sum-up-numbers-simple '(a b c))) ;
+(newline)
+(display (sum-up-numbers-simple '(100 a))) ;
+(newline)
 
 
 ; 3) sum-up-numbers-general
