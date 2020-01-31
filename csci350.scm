@@ -120,7 +120,9 @@
 )
 
 ;test cases
-;(display (get-min '())) this case will never be executed
-(newline)
+;(display (get-min '())) ;this case will never be executed
+(newline)                
 (display (get-min '(3 4 2 9 3 8)))
+(newline)
+;(display (get-min '(a 100 b 200 c 300 d)))
 (newline)
