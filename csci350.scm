@@ -118,6 +118,12 @@
   )
 )
 
+;test cases
+;(display (clean-non-numbers-from-list '(a b c d)))
+(newline)
+;(display (clean-non-numbers-from-list '(a 100 b 200 c 300 d)))
+(newline)
+
 
 ; finds the minumum in a list
 (define (get-min L)
