@@ -39,5 +39,12 @@
   (cond
     ((null? L) 0)
     (else (+ (car L) (sum-up-numbers-simple (cdr L))))
-  )   
+  )
 )
+
+;Test cases
+(display (sum-up-numbers-simple '())) ;check
+(newline)
+(display (sum-up-numbers-simple '(100)))
+(newline)
+(display
