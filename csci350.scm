@@ -31,8 +31,10 @@
 (display (reverse-general '((1 (2 3) (4 (a (b (c d)))))))) ;check
 
 
-
-
+; 2) sum-up-numbers-simple
+  ;function sum-up-numbers-simple using recursion
+      ;parameter - a list
+  ;the result is the sum of all the numbers in the input list
 
 
 
@@ -42,7 +44,7 @@
 ; 3) sum-up-numbers-general
 ;function sum-up-numbers-general using recursion
     ;parameter - a list
-;the result is the sum of all the numbers in the input list
+;the result is the sum of all the numbers in the input list including nested list
 
 (define (sum-up-numbers-general L)
   (cond
