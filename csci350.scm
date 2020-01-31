@@ -141,3 +141,14 @@
 (newline)
 ;(display (get-min '(a 100 b 200 c 300 d)))
 (newline)
+
+
+
+(define (min-above-min L1 L2)
+   (cond
+       ((null? L1) #f) ;if L1 is empty
+       ((null? (clean-non-numbers-from-list L1)) #f) ; if there are no numbers in L1
+       ((null? L2) (get-min (clean-non-numbers-from-list L1)))
+       (else (get-min (append L1 L2)))
+   )
+)
