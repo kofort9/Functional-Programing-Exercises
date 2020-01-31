@@ -36,3 +36,8 @@
 ;the result is the sum of all the numbers in the input list
 
 (define (sum-up-numbers-simple L)
+  (cond
+    ((null? L) 0)
+    (else (+ (car L) (sum-up-numbers-simple (cdr L))))
+  )   
+)
