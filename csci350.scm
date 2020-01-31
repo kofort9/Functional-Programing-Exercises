@@ -109,6 +109,15 @@
     ; if there is no number in L2, return the minumum in L1
     ; if there is no number in L1 that is larger than the smallest  number in L2
         ; return #F
+; removes non-numbers from list
+(define (clean-non-numbers-from-list L)
+  (cond
+   ((null? L) '())
+    ((not (number? (car L))) (clean-non-numbers-from-list (cdr L)))
+    (else (cons (car L) (clean-non-numbers-from-list (cdr L))))
+  )
+)
+
 
 ; finds the minumum in a list
 (define (get-min L)
@@ -121,7 +130,7 @@
 
 ;test cases
 ;(display (get-min '())) ;this case will never be executed
-(newline)                
+(newline)
 (display (get-min '(3 4 2 9 3 8)))
 (newline)
 ;(display (get-min '(a 100 b 200 c 300 d)))
