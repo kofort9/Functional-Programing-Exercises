@@ -32,5 +32,8 @@
 (newline)
 (display (reverse-general '((a b c)))) ;check
 (newline)
-(display (reverse-general '((a b c) (d e f))))
+(display (reverse-general '((a b c) (d e f)))) ;check
 (newline)
+(display (reverse-general '((a (b c) ((d e) f) g)))) ;check
+(newline)
+(display (reverse-general '((1 (2 3) (4 (a (b (c d)))))))) ;check
