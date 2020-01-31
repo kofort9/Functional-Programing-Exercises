@@ -38,7 +38,8 @@
 (define (sum-up-numbers-simple L)
   (cond
     ((null? L) 0)
-    ((< 0 (car L)) (+ (car L) (sum-up-numbers-simple (cdr L))))
+    ((list? (car L)) (+ (sum-up-numbers-simple (car L))))
+    ((not(number? (car L))) (sum-up-numbers-simple (cdr L)))
     (else (+ (car L) (sum-up-numbers-simple (cdr L))))
   )
 )
@@ -54,5 +55,9 @@
 (newline)
 (display (sum-up-numbers-simple '(a 100 b 200 c 300 d))) ;check
 (newline)
-(newline)
 (display (sum-up-numbers-simple '(())))
+(newline)
+(display (sum-up-numbers-simple '((100)))) ;check
+(newline)
+(display (sum-up-numbers-simple  '(100 (200))))  ;check
+(newline)
