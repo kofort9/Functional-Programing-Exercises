@@ -110,13 +110,13 @@
     ; if there is no number in L1 that is larger than the smallest  number in L2
         ; return #F
 
-; created a fucntion to find the minimum on on list
+; finds the minumum in a list
 (define (get-min L)
-    (cond
-        ((null? (cdr L)) (car L))
-        ((< (car L) (get-min (cdr L))) (car L))
-        (else (get-min (cdr L)))
-    )
+  (cond
+    ((null? (cdr L)) (car L))
+    ((< (car L) (get-min (cdr L))) (car L))
+    (else (get-min (cdr L)))
+  )
 )
 
 ;test cases
