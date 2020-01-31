@@ -23,7 +23,14 @@
         )
 )
 
+;Test cases
+(display (reverse-general '())) ;check
+(newline)
 (display (reverse-general '(a b c))) ;check
 (newline)
 (display (reverse-general '(a b ()))) ;check
+(newline)
+(display (reverse-general '((a b c)))) ;check
+(newline)
+(display (reverse-general '((a b c) (d e f))))
 (newline)
