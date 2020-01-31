@@ -36,6 +36,11 @@
       ;parameter - a list
   ;the result is the sum of all the numbers in the input list
 
+(define (sum-up-numbers-simple L)
+  (cond
+    ((null? L) 0)
+    ((list? (car L)) (+ (sum-up-numbers-simple (cdr L))))
+    ((not(number? (car L))) (sum-up-numbers-simple (cdr L)))
 
 
 
