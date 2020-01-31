@@ -64,6 +64,7 @@
 (newline)
 (display (sum-up-numbers-simple  '(100 (200)))) ;check
 (newline)
+(display (sum-up-numbers-simple '(a 100 b (200) c 300 d))) ;check
 
 
 ; 3) sum-up-numbers-general
