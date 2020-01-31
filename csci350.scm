@@ -118,3 +118,9 @@
         (else (get-min (cdr L)))
     )
 )
+
+;test cases
+(display (get-min '())) ;this case will never be executed
+(newline)
+(display (get-min '(3 4 2 9 3 8)))
+(newline)
