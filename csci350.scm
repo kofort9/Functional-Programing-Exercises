@@ -41,8 +41,14 @@
     ((null? L) 0)
     ((list? (car L)) (+ (sum-up-numbers-simple (cdr L))))
     ((not(number? (car L))) (sum-up-numbers-simple (cdr L)))
+    (else (+ (car L) (sum-up-numbers-simple (cdr L))))
+  )
+)
 
-
+;Test cases
+(display (sum-up-numbers-simple '())) ;check
+(newline)
+(display (sum-up-numbers-simple '(100 200))) ;
 
 
 
