@@ -38,6 +38,7 @@
 (define (sum-up-numbers-simple L)
   (cond
     ((null? L) 0)
+    ((< 0 (car L)) (+ (car L) (sum-up-numbers-simple (cdr L))))
     (else (+ (car L) (sum-up-numbers-simple (cdr L))))
   )
 )
@@ -45,6 +46,7 @@
 ;Test cases
 (display (sum-up-numbers-simple '())) ;check
 (newline)
-(display (sum-up-numbers-simple '(100)))
+(display (sum-up-numbers-simple '(100))) ;check
 (newline)
-(display
+(display (sum-up-numbers-simple '(100 200))) ;check
+(newline)
