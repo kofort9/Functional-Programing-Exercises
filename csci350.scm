@@ -147,7 +147,7 @@
 )
 ;test cases
 (display (min-remover '(3 4 2 9 3 8)))
-(newline) 
+(newline)
 
 ; 4) min-above-min
     ; parameters are 2 list L1,L2
@@ -163,13 +163,9 @@
        ((null? L2) (get-min (clean-non-numbers-from-list L1)))
        ; compare min L1 and min L2
        (else (cond
-                ((> (get-min (clean-non-numbers-from-list L1))
-                    (get-min (clean-non-numbers-from-list L2)))
-                (get-min (clean-non-numbers-from-list L1))) ;returns min of L1
-                ((< (get-min (clean-non-numbers-from-list L1))
-                    (get-min (clean-non-numbers-from-list L2)))  ) ;
-                ((= (get-min (clean-non-numbers-from-list L1))
-                    (get-min (clean-non-numbers-from-list L2))) #f)
+                  ((> (get-min (clean-non-numbers-from-list L1)) (get-min (clean-non-numbers-from-list L2)))  (get-min (clean-non-numbers-from-list L1)))
+                  ((= (get-min (clean-non-numbers-from-list L1)) (get-min (clean-non-numbers-from-list L2)))
+                   (min-above-min (min-remover (clean-non-numbers-from-list L1)) (clean-non-numbers-from-list L2)))
               ))
-   )
+    )
 )
