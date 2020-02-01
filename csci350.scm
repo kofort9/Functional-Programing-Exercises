@@ -175,3 +175,8 @@
 (newline)
 (display (min-above-min '(100) '())) ;check
 (newline)
+(display (min-above-min '(a 200 b 100 c 300 d) '())) ;check
+(newline)
+(display (min-above-min '(a) '())) ;check
+(newline)
+(display (min-above-min '(a) '(a 200 b 100 c 300 d))) ;check
