@@ -9,7 +9,8 @@
         (if (null? L)
             '()
             (if (list? (car L))
-                (append (reverse-general (cdr L)) (list (reverse-general (car L))))
+                (append (reverse-general (cdr L))
+                        (list (reverse-general (car L))))
                 (append (reverse-general (cdr L)) (list (car L)))
             )
         )
@@ -75,7 +76,8 @@
 (define (sum-up-numbers-general L)
   (cond
     ((null? L) 0)
-    ((list? (car L)) (+ (sum-up-numbers-general (car L)) (sum-up-numbers-general (cdr L))))
+    ((list? (car L)) (+ (sum-up-numbers-general (car L))
+                        (sum-up-numbers-general (cdr L))))
     ((not(number? (car L))) (sum-up-numbers-general (cdr L)))
     (else (+ (car L) (sum-up-numbers-general (cdr L))))
   )
@@ -159,14 +161,19 @@
 (define (min-above-min L1 L2)
    (cond
        ((null? L1) #f) ;if L1 is empty
-       ((null? (clean-non-numbers-from-list L1)) #f) ; if there are no numbers in L1
+       ((null? (clean-non-numbers-from-list L1)) #f) ;if no numbers in L1
        ((null? L2) (get-min (clean-non-numbers-from-list L1)))
        ; compare min L1 and min L2
        (else (cond
-                  ((> (get-min (clean-non-numbers-from-list L1)) (get-min (clean-non-numbers-from-list L2)))  (get-min (clean-non-numbers-from-list L1)))
-                  ((= (get-min (clean-non-numbers-from-list L1)) (get-min (clean-non-numbers-from-list L2)))
-                   (min-above-min (min-remover (clean-non-numbers-from-list L1)) (clean-non-numbers-from-list L2)))
-              ))
+                  ((> (get-min (clean-non-numbers-from-list L1))
+                      (get-min (clean-non-numbers-from-list L2)))
+                      (get-min (clean-non-numbers-from-list L1)))
+                  ((= (get-min (clean-non-numbers-from-list L1))
+                      (get-min (clean-non-numbers-from-list L2)))
+                   (min-above-min (min-remover (clean-non-numbers-from-list L1))
+                                  (clean-non-numbers-from-list L2)))
+              )
+        )
     )
 )
 
