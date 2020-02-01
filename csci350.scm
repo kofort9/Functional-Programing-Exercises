@@ -138,6 +138,17 @@
 ;(display (get-min '(a 100 b 200 c 300 d)))
 (newline)
 
+;remove-min function
+(define (min-remover L)
+    (cond
+         ((eq? (car L) (get-min L)) (cdr L))
+         (else (cons (car L) (min-remover (cdr L))))
+     )
+)
+;test cases
+(display (min-remover '(3 4 2 9 3 8)))
+(newline) 
+
 ; 4) min-above-min
     ; parameters are 2 list L1,L2
     ; find the minimum number in L1 that is less then the minumum in L2
@@ -150,6 +161,15 @@
        ((null? L1) #f) ;if L1 is empty
        ((null? (clean-non-numbers-from-list L1)) #f) ; if there are no numbers in L1
        ((null? L2) (get-min (clean-non-numbers-from-list L1)))
-       (else (get-min (append L1 L2)))
+       ; compare min L1 and min L2
+       (else (cond
+                ((> (get-min (clean-non-numbers-from-list L1))
+                    (get-min (clean-non-numbers-from-list L2)))
+                (get-min (clean-non-numbers-from-list L1))) ;returns min of L1
+                ((< (get-min (clean-non-numbers-from-list L1))
+                    (get-min (clean-non-numbers-from-list L2)))  ) ;
+                ((= (get-min (clean-non-numbers-from-list L1))
+                    (get-min (clean-non-numbers-from-list L2))) #f)
+              ))
    )
 )
