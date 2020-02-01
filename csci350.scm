@@ -118,9 +118,9 @@
 
 ;test cases
 ;(display (clean-non-numbers-from-list '(a b c d)))
-(newline)
+;(newline)
 ;(display (clean-non-numbers-from-list '(a 100 b 200 c 300 d)))
-(newline)
+;(newline)
 
 
 ; finds the minumum in a list
@@ -134,11 +134,11 @@
 
 ;test cases
 ;(display (get-min '())) ;this case will never be executed
-(newline)
-(display (get-min '(3 4 2 9 3 8)))
-(newline)
+;(newline)
+;(display (get-min '(3 4 2 9 3 8)))
+;(newline)
 ;(display (get-min '(a 100 b 200 c 300 d)))
-(newline)
+;(newline)
 
 ;remove-min function
 (define (min-remover L)
@@ -148,7 +148,7 @@
      )
 )
 ;test cases
-(display (min-remover '(3 4 2 9 3 8)))
+;(display (min-remover '(3 4 2 9 3 8)))
 (newline)
 
 ; 4) min-above-min
